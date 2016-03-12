@@ -200,16 +200,6 @@
     <keybind key="W-Right">
       <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
     </keybind>
-    <keybind key="W-Up">
-      <action name="AddDesktop">
-        <where>last</where>
-      </action>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="RemoveDesktop">
-        <where>current</where>
-      </action>
-    </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
@@ -296,6 +286,8 @@
     <keybind key="F11"><action name="ToggleFullscreen"/></keybind>
     <keybind key="W-m"><action name="ToggleMaximize"/></keybind>
     <keybind key="W-n"><action name="Iconify"/></keybind>
+    <keybind key="W-Up"><action name="ToggleMaximize"/></keybind>
+    <keybind key="W-Down"><action name="Iconify"/></keybind>
     <keybind key="A-space">
       <action name="ShowMenu"><menu>client-menu</menu></action>
     </keybind>
