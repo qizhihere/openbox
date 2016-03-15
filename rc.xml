@@ -362,7 +362,7 @@
       <keybind key="g" chroot="yes">
         <keybind key="c">
           <action name="Execute">
-            <command>chromium</command>
+            <command>google-chrome-stable</command>
           </action>
           <action name="BreakChroot"></action>
           <action name="BreakChroot"></action>
