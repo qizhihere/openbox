@@ -437,6 +437,30 @@
         <command>thunar</command>
       </action>
     </keybind>
+
+    <!-- scrot shortcuts -->
+    <keybind key="Print">
+      <action name="Execute">
+        <command>sh -c "~/scripts/scrot.sh -D ~/Pictures/screenshots"</command>
+      </action>
+    </keybind>
+    <keybind key="S-Print">
+      <action name="Execute">
+        <command>sh -c "~/scripts/scrot.sh -D ~/Pictures/screenshots -s"</command>
+      </action>
+    </keybind>
+    <keybind key="C-Print">
+      <action name="Execute">
+        <command>sh -c "~/scripts/scrot.sh -D ~/Pictures/screenshots -bs"</command>
+      </action>
+    </keybind>
+    <keybind key="A-Print">
+      <action name="Execute">
+        <command>sh -c "~/scripts/scrot.sh -D ~/Pictures/screenshots -W 3"</command>
+      </action>
+    </keybind>
+
+
   </keyboard>
 
   <mouse>
