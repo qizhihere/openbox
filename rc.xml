@@ -357,6 +357,12 @@
       <keybind key="apostrophe">
         <action name="Execute"><command>bash ~/scripts/random-wallpaper.sh</command></action>
       </keybind>
+      <keybind key="semicolon">
+        <action name="Execute">
+          <command>sh -c "bg=$(realpath /tmp/bg); rm -f \"$bg\"; notify-send 'Wallpaper deleted!' \"$bg\""</command>
+        </action>
+        <action name="BreakChroot"></action>
+      </keybind>
 
       <!-- shortcuts for launching apps -->
       <keybind key="g" chroot="yes">
