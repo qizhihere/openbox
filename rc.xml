@@ -363,6 +363,10 @@
         </action>
         <action name="BreakChroot"></action>
       </keybind>
+      <keybind key="p">
+        <action name="Execute"><command>sudo bash ~/scripts/proxy.sh</command></action>
+        <action name="BreakChroot"></action>
+      </keybind>
 
       <!-- shortcuts for launching apps -->
       <keybind key="g" chroot="yes">
@@ -376,6 +380,13 @@
         <keybind key="e">
           <action name="Execute">
             <command>emacs</command>
+          </action>
+          <action name="BreakChroot"></action>
+          <action name="BreakChroot"></action>
+        </keybind>
+        <keybind key="S-e">
+          <action name="Execute">
+            <command>emacs --no-desktop</command>
           </action>
           <action name="BreakChroot"></action>
           <action name="BreakChroot"></action>
