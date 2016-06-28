@@ -445,6 +445,26 @@
         <command>xfce4-popup-whiskermenu</command>
       </action>
     </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <command>rofi -show run</command>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <command>rofi -show ssh</command>
+      </action>
+    </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>rofi -show window</command>
+      </action>
+    </keybind>
+    <keybind key="W-a">
+      <action name="Execute">
+        <command>rofi -show drun</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
@@ -754,6 +774,9 @@
   </menu>
 
   <applications>
+    <application class="*">
+      <focus>yes</focus>
+    </application>
     <!-- remove window decorations of termite -->
     <application class="Termite">
       <decor>no</decor>
