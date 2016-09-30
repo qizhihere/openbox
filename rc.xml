@@ -346,8 +346,14 @@
 
     <keybind key="W-z" chroot="yes">
       <!-- refresh/reload openbox -->
-      <keybind key="t"><action name="ToggleAlwaysOnTop"/></keybind>
-      <keybind key="b"><action name="ToggleAlwaysOnBottom"/></keybind>
+      <keybind key="t">
+        <action name="ToggleAlwaysOnTop"/>
+        <action name="BreakChroot"></action>
+      </keybind>
+      <keybind key="b">
+        <action name="ToggleAlwaysOnBottom"/>
+        <action name="BreakChroot"></action>
+      </keybind>
 
       <!-- shortcuts for applying custom scripts -->
       <keybind key="l">
@@ -358,9 +364,11 @@
         <action name="Execute"><command>bash ~/scripts/random-wallpaper.sh</command></action>
       </keybind>
       <keybind key="semicolon">
-        <action name="Execute">
-          <command>sh -c "bg=$(realpath /tmp/bg); rm -f \"$bg\"; notify-send 'Wallpaper deleted!' \"$bg\""</command>
-        </action>
+        <!--
+             <action name="Execute">
+             <command>sh -c "bg=$(realpath /tmp/bg); rm -f \"$bg\"; notify-send 'Wallpaper deleted!' \"$bg\""</command>
+             </action>
+           -->
         <action name="BreakChroot"></action>
       </keybind>
       <keybind key="p">
@@ -777,7 +785,8 @@
     <application class="*">
       <focus>yes</focus>
     </application>
-    <!-- remove window decorations of termite -->
+
+    <!-- remove window decorations -->
     <application class="Termite">
       <decor>no</decor>
     </application>
@@ -790,6 +799,34 @@
     <application class="feh">
       <decor>no</decor>
     </application>
+
+    <!-- lyrics -->
+    <application class="netease-cloud-music" type="utility">
+      <desktop>all</desktop>
+      <shade>no</shade>
+    </application>
+
+    <!-- which desktop at startup -->
+    <!--SBEG
+    <application class="Emacs">
+      <desktop>1</desktop>
+      <maximized>true</maximized>
+    </application>
+    <application class="Termite">
+      <desktop>2</desktop>
+      <maximized>true</maximized>
+    </application>
+    <application role="browser">
+      <desktop>3</desktop>
+    </application>
+    <application class="Thunar">
+      <desktop>4</desktop>
+    </application>
+    <application class="netease-cloud-music">
+      <desktop>5</desktop>
+    </application>
+    SEND-->
+
     <!--
          # this is an example with comments through out. use these to make your
          # own rules, but without the comments of course.
